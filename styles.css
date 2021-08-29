@@ -1,0 +1,277 @@
+:root {
+    --gold : #d8a87d;
+    --white: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+    text-decoration: none;
+}
+sup {
+    font-size: 18px
+}
+body {
+  background-color: #0d313b;
+  font-family: sans-serif;
+}
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.nav {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__left {
+    display: flex;
+}
+.nav__left img {
+    width: 71px;
+    height: 85px
+}
+.nav__left ul {
+    display: flex;
+}
+.nav__left ul li {
+    overflow: hidden;
+    
+}
+
+.nav__left ul li a {
+    padding-left: 40px;
+    line-height: 80px;
+    color: var(--gold);
+    transition: 0.2s;
+    cursor: pointer;
+}
+.nav__left ul li a:hover {
+    color: var(--white)
+}
+.nav__left ul li a.active {
+    color: var(--white)
+}
+
+
+.nav__right {
+    display: flex;
+}
+.nav__right img {
+    width: 30px;
+    margin: auto;
+    padding-right: 25px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.nav__right img:hover {
+    filter: brightness(130%);
+    transform:translateY(-3px)
+}
+
+.main {
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+.main .image {
+    position: relative;
+}
+.main .image img.snare{
+    width: 620px;
+    margin: auto;
+    position: relative;
+}
+
+.blackRect {
+    position: absolute;
+    width: 120px;
+    top: 160px;
+    left: 20px;
+    transition: 0.5s;
+}
+.blackRect:hover {
+    transform: translateY(-15px);
+}
+.blackSq {
+    position: absolute;
+    width: 138px;
+    top: 180px;
+    left: 240px;
+    transition: 0.5s;
+}
+.blackSq:hover {
+    transform: translateY(15px)
+}
+.yellowSqu {
+    position: absolute;
+    width: 138px;
+    top: 0;
+    left: 400px;
+    transition: 0.5s;
+}
+.yellowSqu:hover {
+    transform: translateX(20px)
+}
+.bigCir {
+    position: absolute;
+    top: 350px;
+    width: 138px;
+    left: 140px;
+    transition: 0.5s;
+}
+.bigCir:hover {
+    transform: translateX(-20px);
+}
+.halfCir {
+    position: absolute;
+    top: -10px;
+    left: 230px;
+    width: 138px;
+    z-index: -10;
+}
+
+.smallCir {
+    position: absolute;
+    width: 138px;
+    top: 256px;
+    right: 0;
+    z-index: -10;
+}
+.ball1 {
+    position: absolute;
+    top: 290px;
+    left:190px;
+    width: 32px;
+    transition: 0.5s;
+}
+.ball1:hover {
+    transform: translateY(-10px);
+}
+.ball2 {
+    position: absolute;
+    top: 260px;
+    right: 130px;
+    width: 32px;
+    transition: 0.5s;
+}
+.ball2:hover {
+    transform: translateY(20px);
+}
+.main .content {
+    margin: auto;
+}
+.main .content .title {
+    font-size: 5rem;
+    color: var(--white);
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+.main .content .title:hover {
+    transform: translateX(15px);
+}
+.main .content .title span {
+    font-weight: 600;
+}
+.main .content .subTitle {
+    color:var(--gold);
+    font-size: 2rem;
+    padding-bottom: 50px;
+    transition: 0.5s;
+    text-transform: uppercase;
+
+}
+.main .content .subTitle:hover {
+    transform: translateX(15px);
+}
+.main .content .para {
+    max-width: 600px;
+    color: var(--gold);
+    word-break: break-all;
+    padding-bottom: 35px
+}
+.main .content .btn {
+    display: flex;
+    gap: 30px;
+    font-size: 22.4px;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.content .btn img {
+    width: 40px
+}
+.content .btn:hover {
+    transform: translateX(8px);
+    text-decoration: underline;
+    text-shadow: 0px 1px 2px #bdbbbb;
+}
+
+footer .nav__social{
+    display: none;
+}
+
+.nav__social img {
+    width: 45px;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.nav__social img:hover {
+    filter: brightness(130%);
+    transform:translateY(-3px)
+}
+
+/*min width 1024*/
+@media only screen and (min-width: 1025px){
+    .nav__social {
+        display: none;
+    }
+}
+
+/*Responsive cho tablet ngang*/
+@media only screen and (max-width: 1024px) {
+    
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav__right {
+        display: none;
+    }
+    .nav__social {
+        display: flex;
+        gap: 40px
+    }
+}
+
+/*Màn tablet dọc*/
+@media only screen and (max-width: 768px) {
+    .nav__right {
+            display: none;
+        }
+    .nav__social {
+        display: flex;
+        gap: 30px
+    }
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*Màn hình chiều ngang cho smartphone vừa*/
+@media only screen and (max-width: 640px) {
+    .respo {
+        display: none;
+    }
+    .main .content .subTitle {
+        font-size: 1.5rem;
+    }
+}
+
+/*Màn hình chiều ngang cho smartphone nhỏ*/
