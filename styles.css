@@ -239,6 +239,7 @@ footer .nav__social{
     .main {
         flex-direction: column;
         align-items: center;
+        gap: 30px
     }
     .nav__right {
         display: none;
